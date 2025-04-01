@@ -1,4 +1,5 @@
 import WeatherCard from "./components/weatherCard";
+import CryptoList from "./components/cryptoList";
 
 export default function Home() {
   return (
@@ -9,6 +10,10 @@ export default function Home() {
         <WeatherCard lat={51.5074} lon={-0.1278} city="London" country="UK" />
         <WeatherCard lat={35.6895} lon={139.6917} city="Tokyo" country="Japan" />
       </div>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <h1 className="text-3xl font-bold mb-6">Cryptocurrency</h1>
+      <CryptoList />
+    </div>
     </div>
   );
 }

@@ -43,7 +43,7 @@ const WeatherCard = ({ lat, lon, city, country }) => {
       {weatherData && (
         <div className="mt-4">
           <div className="flex items-center justify-between">
-            <p className="text-3xl font-bold">{weatherData.main.temp}°C</p>
+            <p className="text-3xl font-bold"> {(weatherData.main.temp - 272.15).toFixed(2)}°C</p>
             {getWeatherIcon(weatherData.weather[0].main)}
           </div>
           <p className="text-gray-300">{weatherData.weather[0].description}</p>
